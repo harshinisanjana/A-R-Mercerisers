@@ -70,7 +70,7 @@ const Navigation = () => {
                 {link}
               </a>
             ))}
-            <PrimaryButton className="px-6 py-3">Request a Sample</PrimaryButton>
+            <PrimaryButton onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="px-6 py-3">Request a Sample</PrimaryButton>
           </div>
           <button className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X /> : <Menu />}
