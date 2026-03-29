@@ -65,7 +65,7 @@ const Navigation = () => {
             A R Mercerisers
           </div>
           <div className="hidden lg:flex items-center gap-12">
-            {['Products', 'Process', 'About', 'Certifications', 'Contact'].map((link) => (
+            {['Products', 'Process', 'About', 'Contact'].map((link) => (
               <a key={link} href={`#${link.toLowerCase()}`} className="font-inter text-xs tracking-[0.2em] uppercase transition-colors duration-500 hover:text-accent">
                 {link}
               </a>
@@ -80,7 +80,7 @@ const Navigation = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden absolute top-24 left-0 w-full bg-background border-b border-foreground/10 p-6 flex flex-col gap-6">
-          {['Products', 'Process', 'About', 'Certifications', 'Contact'].map((link) => (
+          {['Products', 'Process', 'About', 'Contact'].map((link) => (
             <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setMenuOpen(false)} className="font-inter text-sm tracking-[0.2em] uppercase transition-colors duration-500 hover:text-accent">
               {link}
             </a>
@@ -101,7 +101,7 @@ const Hero = () => (
           </h1>
           <div className="flex items-center gap-4 mb-12">
             <div className="h-px w-8 md:w-12 bg-foreground"></div>
-            <span className="font-inter text-xs uppercase tracking-[0.25em] text-foreground">Coimbatore, India · Est. 1998</span>
+            <span className="font-inter text-xs uppercase tracking-[0.25em] text-foreground">Coimbatore, India · Est. 2019</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-6">
             <PrimaryButton onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -120,7 +120,7 @@ const Hero = () => (
           />
           <div className="absolute inset-0 border-[0.5rem] border-background/20 mix-blend-overlay pointer-events-none"></div>
           <div className="absolute top-1/2 -right-4 md:-right-8 -translate-y-1/2 font-inter text-xs uppercase tracking-[0.25em] text-foreground [writing-mode:vertical-rl] rotate-180">
-            Mercerised / Since 1998
+            Mercerised / Since 2019
           </div>
         </div>
       </div>
@@ -129,10 +129,9 @@ const Hero = () => (
     <div className="w-full border-t border-foreground/10 bg-background/50 backdrop-blur z-20">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-12 md:px-24 w-full divide-y md:divide-y-0 md:divide-x divide-foreground/10 grid grid-cols-2 md:grid-cols-4">
         {[
-          { stat: "25+", label: "Years of Excellence" },
-          { stat: "3,000+", label: "MT Capacity per Month" },
-          { stat: "40+", label: "Export Countries" },
-          { stat: "ISO", label: "9001:2015 Certified" }
+          { stat: "20+", label: "Years of Experienced Team" },
+          { stat: "50+", label: "MT Capacity per Month" },
+          { stat: "25+", label: "Customers" },
         ].map((item, i) => (
           <div key={i} className="py-6 flex flex-col items-center justify-center gap-2">
             <span className="font-playfair text-3xl md:text-4xl">{item.stat}</span>
@@ -152,7 +151,7 @@ const About = () => (
         <span className="font-inter text-xs uppercase tracking-[0.25em] text-background/60 block mb-8">Our Craft</span>
         <p className="font-inter text-base md:text-lg leading-relaxed text-background/80 relative">
           <span className="float-left font-playfair text-7xl md:text-8xl leading-none pr-4 pt-2 text-accent">M</span>
-          ercerisation is not merely a process &mdash; it is a transformation. Since 1998, A R Mercerisers has refined this century-old treatment into a precise science. Founded in Coimbatore, the heart of India's textile innovation, we subject premium cotton fibre to controlled tension and alkali baths, permanently altering its cellular structure. The result is unparalleled luster, strength, and brilliance.
+          ercerisation is not merely a process &mdash; it is a transformation. Since 2019, A R Mercerisers has refined this century-old treatment into a precise science. Founded in Coimbatore, the heart of India's textile innovation, we subject premium cotton fibre to controlled tension and alkali baths, permanently altering its cellular structure. The result is unparalleled luster, strength, and brilliance.
         </p>
       </div>
       <div className="col-span-1 md:col-span-7 pl-0 md:pl-12 lg:pl-24">
@@ -169,20 +168,19 @@ const Products = () => {
   const products = [
     { title: "Mercerised Cotton Yarn", range: "20s to 120s Count", img: "/Mercerised Cotton Yarn.jpg", desc: "Premium yarn for shirting, hosiery, and embroidery, treated for maximum dye absorption and silk-like sheen." },
     { title: "Mercerised Fabric", range: "Woven & Knitted", img: "/Mercerised Fabric.jpg", desc: "Grey and bleached fabrics treated to achieve a perfect drape and sustained brilliance for high-end apparel." },
-    { title: "Warp Mercerisation", range: "Continuous Process", img: "/Warp Mercerisation.jpg", desc: "Specialised contiguous mercerisation of warp yarn tailored for the world's most demanding shirting markets." },
     { title: "Hank Mercerisation", range: "Batch Excellence", img: "/Hank Mercerisation.jpg", desc: "Precision batch-processed yarn ideal for fine count embroidery threads and specialized applications." },
     { title: "Caustic Recovery", range: "Sustainable Practice", img: "/Caustic Recovery.jpg", desc: "Eco-conscious closed-loop recovery of sodium hydroxide, drastically reducing our environmental footprint." }
   ];
 
   return (
     <section id="products" className="relative py-24 md:py-32 bg-background z-10">
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-12 md:px-24 mb-20 md:mb-32">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-12 md:px-24 mb-16 md:mb-24 text-center">
         <span className="font-inter text-xs uppercase tracking-[0.25em] text-muted-foreground block mb-6">The Collection</span>
         <h2 className="font-playfair text-5xl md:text-7xl">Precision, <span className="italic text-accent">At Every Count</span></h2>
       </div>
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-12 md:px-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-12 md:px-24 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
         {products.map((p, i) => (
-          <div key={i} className="group relative border-t border-foreground/10 pt-8 flex flex-col cursor-pointer bg-background transition-shadow duration-500 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:z-20">
+          <div key={i} className="group relative border-t border-foreground/10 pt-8 flex flex-col items-center text-center cursor-pointer bg-background transition-shadow duration-500 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:z-20">
             <div className="w-full aspect-[4/5] overflow-hidden mb-8 bg-muted relative">
               <img src={p.img} alt={p.title} className="w-full h-full object-cover grayscale transition-all duration-1500 group-hover:grayscale-0 group-hover:scale-105" />
             </div>
@@ -200,7 +198,7 @@ const Process = () => {
   const steps = [
     { num: "01", title: "Grey Fabric Inspection", desc: "Raw cotton yarn or fabric undergoes rigorous quality inspection for count, evenness, and tensile parameters." },
     { num: "02", title: "Singeing & Desizing", desc: "Surface fibres are removed by singeing; sizing agents are washed out to prepare a clean substrate." },
-    { num: "03", title: "Caustic Impregnation", desc: "Fabric passes through a 300 g/L sodium hydroxide bath at controlled temperature, swelling the fibres." },
+    { num: "03", title: "Caustic Impregnation", desc: "Fabric and yarn passes through a 300 g/L sodium hydroxide bath at controlled temperature, swelling the fibres." },
     { num: "04", title: "Tension Control", desc: "Stretched under precision mechanical tension — the critical step that produces the silk-like lustre." },
     { num: "05", title: "Washing & Neutralisation", desc: "Caustic soda is thoroughly washed out and neutralised; liquor is reclaimed for reuse." },
     { num: "06", title: "Final Inspection", desc: "Tested for lustre (AATCC standards), shrinkage, dye uptake, and tensile strength before dispatch." }
@@ -228,24 +226,12 @@ const Process = () => {
 };
 
 const Certifications = () => (
-  <section id="certifications" className="relative py-24 md:py-40 bg-foreground text-background z-10 mx-[1px]">
-    <div className="max-w-[1600px] mx-auto px-6 sm:px-12 md:px-24">
-      <div className="text-center mb-16 md:mb-24">
-        <span className="font-inter text-xs uppercase tracking-[0.25em] text-background/60 block mb-6">Our Standards</span>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 pt-8 border-t border-background/20 max-w-4xl mx-auto">
-          {['ISO 9001:2015 Certified', 'OEKO-TEX® Commitment', 'Global Export Compliance'].map(cert => (
-            <span key={cert} className="font-inter text-sm md:text-base uppercase tracking-[0.2em] text-background">{cert}</span>
-          ))}
-        </div>
-      </div>
-      <div className="max-w-5xl mx-auto text-center border-t border-background/20 pt-16 md:pt-24">
-        <h2 className="font-playfair text-4xl md:text-5xl lg:text-7xl leading-tight">
-          <span className="italic text-accent">"Quality is not an act — </span><br />
-          it is the discipline of every shift."
-        </h2>
-      </div>
-    </div>
-  </section>
+  <div className="max-w-5xl mx-auto text-center border-t border-background/20 pt-16 md:pt-24">
+    <h2 className="font-playfair text-4xl md:text-5xl lg:text-7xl leading-tight">
+      <span className="italic text-accent">"Quality is not an act — </span><br />
+      it is the discipline of every shift."
+    </h2>
+  </div>
 );
 
 const Testimonials = () => (
@@ -289,11 +275,8 @@ const Industries = () => (
     <div className="max-w-[1600px] mx-auto px-6 sm:px-12 md:px-24 grid grid-cols-1 md:grid-cols-12 gap-y-12 gap-x-8">
       {[
         { title: "Premium Apparel & Fashion", desc: "High-end shirting and tailored garments demanding zero shrinkage and lasting brilliance." },
-        { title: "Home Textiles", desc: "Luxury bed linen and towelling requiring unparalleled softness and tensile resilience." },
         { title: "Embroidery & Thread", desc: "Fine count threads engineered for flawless machine and hand embroidery." },
         { title: "Industrial Textiles", desc: "Specialised applications demanding exceptional structural integrity." },
-        { title: "European Luxury", desc: "Export-grade mercerised materials meeting stringent EU quality frameworks." },
-        { title: "Global Markets", desc: "Supplying discerning markets across the USA, Middle East, and Japan." }
       ].map((ind, i) => (
         <div key={i} className={`col-span-1 md:col-span-6 lg:col-span-4 border-t border-foreground/10 pt-8 pb-12 transition-all duration-700 hover:border-accent hover:bg-muted/10 px-8 cursor-pointer ${i % 2 !== 0 ? 'mt-0 md:mt-16 lg:mt-0' : ''} ${i % 3 === 1 ? 'lg:mt-16' : ''} ${i % 3 === 2 ? 'lg:mt-32' : ''}`}>
           <span className="font-inter text-[10px] uppercase tracking-[0.3em] text-muted-foreground/60 block mb-6">0{i + 1}</span>
@@ -330,16 +313,18 @@ const Contact = () => (
         <div className="space-y-12 border-t border-background/20 pt-12">
           <div>
             <h4 className="font-inter text-xs uppercase tracking-[0.25em] text-background/60 mb-4">Headquarters</h4>
-            <p className="font-inter text-background/80 leading-relaxed text-sm">Plot No. 47, Podanur<br />Coimbatore – 641 021<br />Tamil Nadu, India</p>
+            <p className="font-inter text-background/80 leading-relaxed text-sm">6, Second Cross Street, Chinthamani Nagar, K.K. Pudur<br />Coimbatore – 641 038<br />Tamil Nadu, India</p>
           </div>
           <div>
             <h4 className="font-inter text-xs uppercase tracking-[0.25em] text-background/60 mb-4">Contact</h4>
+            <p className="font-inter text-background/80 leading-relaxed text-sm mb-2">+91 98940 92756</p>
+            <p className="font-inter text-background/80 leading-relaxed text-sm mb-2">+91 94430 45966</p>
             <p className="font-inter text-background/80 leading-relaxed text-sm mb-2">+91 98424 87538</p>
             <p className="font-inter text-background/80 leading-relaxed text-sm mb-2">armercerisers@gmail.com</p>
           </div>
           <div>
             <h4 className="font-inter text-xs uppercase tracking-[0.25em] text-background/60 mb-4">Legal</h4>
-            <p className="font-inter text-background/80 leading-relaxed text-sm">GST: 33XXXXX1234X1ZX</p>
+            <p className="font-inter text-background/80 leading-relaxed text-sm">GST: 33ABMFA9621L1Z5</p>
           </div>
         </div>
       </div>
@@ -352,13 +337,8 @@ const Footer = () => (
     <div className="max-w-[1600px] mx-auto px-6 sm:px-12 md:px-24">
       <h2 className="font-playfair text-4xl md:text-6xl uppercase tracking-widest text-foreground mb-6">A R Mercerisers</h2>
       <p className="font-inter text-sm md:text-base text-muted-foreground uppercase tracking-[0.3em] mb-16">Where Cotton Becomes Silk</p>
-      <div className="flex flex-wrap justify-center gap-8 mb-24 border-y border-foreground/10 py-8">
-        {['ISO 9001:2015', 'OEKO-TEX Certified', 'Global Export Compliance'].map(cert => (
-          <span key={cert} className="font-inter text-xs uppercase tracking-[0.2em] text-foreground">{cert}</span>
-        ))}
-      </div>
       <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-foreground/10 pt-8">
-        <p className="font-inter text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground">© 2025 A R Mercerisers. Coimbatore, India.</p>
+        <p className="font-inter text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground">© 2026 A R Mercerisers. Coimbatore, India.</p>
         <div className="flex gap-6">
           {['Privacy', 'Terms', 'Sitemap'].map(link => (
             <a key={link} href="#" className="font-inter text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-accent transition-colors duration-500">{link}</a>
